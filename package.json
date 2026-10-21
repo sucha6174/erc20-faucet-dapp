@@ -1,0 +1,34 @@
+{
+  "name": "erc20-faucet-dapp",
+  "version": "1.0.0",
+  "description": "Full-stack ERC-20 Token Faucet DApp with On-Chain Rate Limits",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia"
+  },
+  "keywords": [
+    "erc20",
+    "faucet",
+    "ethereum",
+    "solidity",
+    "hardhat",
+    "dapp"
+  ],
+  "author": "sucha6174",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "@openzeppelin/contracts": "^5.1.0",
+    "chai": "^4.5.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4",
+    "hardhat": "^2.22.17"
+  }
+}

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_RPC_URL=${VITE_RPC_URL:-http://localhost:8545}
+      - VITE_TOKEN_ADDRESS=${VITE_TOKEN_ADDRESS}
+      - VITE_FAUCET_ADDRESS=${VITE_FAUCET_ADDRESS}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
